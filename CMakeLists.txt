@@ -397,12 +397,14 @@ set (AMBF_SOURCE_DIR ${PROJECT_SOURCE_DIR})
 # AMBF Simulator
 add_subdirectory (${PROJECT_SOURCE_DIR}/ambf_simulator)
 
+# chess simulator
+add_subdirectory (${PROJECT_SOURCE_DIR}/chess_simulator)
 
 # AMBF Controller. Add if on Linux, Catkin Found and ambf_server Found
 if (${CMAKE_SYSTEM_NAME} MATCHES Linux)
-  if (${catkin_FOUND} AND ${ambf_server_FOUND})
-    add_subdirectory (${PROJECT_SOURCE_DIR}/ambf_controller)
-  endif()
+  #if (${catkin_FOUND} AND ${ambf_server_FOUND})
+    #add_subdirectory (${PROJECT_SOURCE_DIR}/ambf_controller)
+  #endif()
 endif()
 
 #
